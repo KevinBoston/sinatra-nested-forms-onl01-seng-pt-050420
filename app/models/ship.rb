@@ -4,11 +4,11 @@ class Ship
   def self.all 
     @@ships 
   end
-  def initialize (name, type, booty)
-    @name = name 
-    @type = type 
-    @booty = booty 
-    @@ships << self 
+  def initialize(args)
+    @name = args[:name]
+    @type = args[:type]
+    @booty = args[:booty]
+    @@ships << self
   end
   
   def self.clear 
